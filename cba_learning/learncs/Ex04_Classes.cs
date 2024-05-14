@@ -32,7 +32,7 @@ namespace learncs
     }
     class Ex04_Classes
     {
-        static void Main()
+         void Main()
         {
             Person p =  new Person();
             p.display();
