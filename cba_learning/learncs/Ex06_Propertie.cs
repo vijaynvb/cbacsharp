@@ -8,9 +8,9 @@ namespace learncs
 {
     class Employee  // poco
     {
+        private string _name;
         public Employee()
         {
-
         }
         #region :: old way of properties ::
         /*private string name;
@@ -37,12 +37,12 @@ namespace learncs
 
         public string Name {
             get { 
-                return this.Name;
+                return _name;
             }
             set {
                 if (value == null)
                     throw new Exception();
-                this.Name = value; // value is a keyword
+                this._name = value; // value is a keyword
             } 
         }
         public int Age { get; set; }
@@ -61,7 +61,7 @@ namespace learncs
 
     class Ex06_Propertie
     {
-         void Main()
+        static void Main()
         {
             Employee e = new Employee();
             //e.SetName("Vijay");

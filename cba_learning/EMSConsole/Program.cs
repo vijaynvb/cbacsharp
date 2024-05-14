@@ -5,7 +5,20 @@ namespace EMSConsole
     {
         static void Main()
         {
-            EmployeeService employeeService = new EmployeeService();
+            // tightly coupled code 
+            // losely coupled
+
+            int option = Utils.ReadInt("What implementation do you want to work with \n" +
+                "1- inmeory\n" +
+                "2- db");
+            IEmployeeSvc employeeService;
+            // reflection by taking only the name of a class string EmployeeService
+            if (option == 1)
+                 employeeService = new EmployeeService();
+            else if (option == 2)
+                employeeService = new EmployeeServiceDB();
+            else
+                employeeService = new EmployeeService();
             Console.WriteLine("Welcome to EMS Application");
             int userOperation = 0;
             do
@@ -27,6 +40,19 @@ namespace EMSConsole
                         string name = Utils.ReadString("Enter name:");
                         int age = Utils.ReadInt("Enter Age: ");
                         employeeService.CreateEmployee(new Employee(empid, name, age));
+                        break;
+                    case 2:
+                        int empid1 = Utils.ReadInt("Enter EmployeeId: ");
+                        int age1 = Utils.ReadInt("Enter Age: ");
+                        employeeService.UpdateEmployee(empid1, age1);
+                        break;
+                    case 3:
+                        int empid2 = Utils.ReadInt("Enter EmployeeId: ");
+                        employeeService.ReadEmployee(empid2);
+                        break;
+                    case 4:
+                        int empid3 = Utils.ReadInt("Enter EmployeeId: ");
+                        employeeService.DeleteEmployee(empid3);
                         break;
                     case 5:
                         Console.WriteLine("Thank you");

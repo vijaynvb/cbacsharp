@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EMSConsole
 {
-    class Employee : Person
+    public class Employee : Person
     {
         public int EmpId { get; set; }
 

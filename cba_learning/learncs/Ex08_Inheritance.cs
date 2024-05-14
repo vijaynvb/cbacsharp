@@ -30,7 +30,7 @@ namespace learncs
 
     class Ex08_Inheritance
     {
-        static void Main()
+         void Main()
         {
             log a = new log();
            // a.display(); // A console
