@@ -9,6 +9,16 @@ namespace EMSConsole
     class EmployeeService : IEmployeeSvc
     { // CRUD Operations on a Employee list
 
+
+        public EmployeeService()
+        {
+
+        }
+        public EmployeeService(string str)
+        {
+
+        }
+
         Employee[] employees = new Employee[10];
 
         public void CreateEmployee(Employee newEmp)

@@ -14,7 +14,7 @@ namespace learncs
     class Ex09_ExtensionMethods
     {
 
-        static void Main()
+         void Main()
         {
             string str = "some content";
 
