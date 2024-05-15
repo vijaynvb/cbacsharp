@@ -2,9 +2,11 @@
 namespace learncs
 {
     class Ex01_Hello {
-         void Main()
+
+          void Main()
         {
             Console.WriteLine("Hello, World!");
         }
+
      }
 }

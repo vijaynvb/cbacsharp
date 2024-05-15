@@ -10,7 +10,7 @@ namespace learncs
     class Ex12_Delegate2
     {
         delegate void Notifier(string message);
-        static void  Main()
+         void  Main()
         {
             Notifier greetings;
             greetings = new Notifier(SayHello);

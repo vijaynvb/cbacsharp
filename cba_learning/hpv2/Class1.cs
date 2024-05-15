@@ -5,6 +5,7 @@ namespace hpv2
     {
         public override void print()
         {
+
         }
         public virtual void fax()
         {
