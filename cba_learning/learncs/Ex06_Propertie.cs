@@ -61,7 +61,7 @@ namespace learncs
 
     class Ex06_Propertie
     {
-        static void Main()
+         void Main()
         {
             Employee e = new Employee();
             //e.SetName("Vijay");

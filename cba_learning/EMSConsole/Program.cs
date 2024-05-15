@@ -8,17 +8,19 @@ namespace EMSConsole
             // tightly coupled code 
             // losely coupled
 
-            int option = Utils.ReadInt("What implementation do you want to work with \n" +
-                "1- inmeory\n" +
-                "2- db");
+            string option = Utils.ReadString("Give the Fully Qualified Class Name to Employee Service \n");
             IEmployeeSvc employeeService;
+
+            employeeService = (IEmployeeSvc) Utils.GetInstance(option);
             // reflection by taking only the name of a class string EmployeeService
-            if (option == 1)
+            /*if (option == 1)
                  employeeService = new EmployeeService();
             else if (option == 2)
                 employeeService = new EmployeeServiceDB();
             else
-                employeeService = new EmployeeService();
+                employeeService = new EmployeeService();*/
+
+
             Console.WriteLine("Welcome to EMS Application");
             int userOperation = 0;
             do
@@ -78,5 +80,16 @@ namespace EMSConsole
             string  stringval = Console.ReadLine();
             return stringval;
         }
+
+        public static object GetInstance(string fullyQualifiedName) // EMSConsole.EmployeeService
+        {
+            // reflectio logic to create a object
+
+            Type type = Type.GetType(fullyQualifiedName);
+            if (type != null)
+                return Activator.CreateInstance(type);
+            
+            return null;
+        } 
     }
 }
