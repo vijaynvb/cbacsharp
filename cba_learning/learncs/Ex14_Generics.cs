@@ -19,10 +19,15 @@ namespace learncs
         }
     }
 
+    /// <summary>
+    /// This is Addition Generic Class for performing addtion 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     class Addition<T>
     {
         T a;
         T b;
+        int counter = 0;
         public Addition(T a, T b)
         {
             this.a = a;
@@ -42,7 +47,7 @@ namespace learncs
         int a=0;
         int b=0;
 
-        static void Main()
+         void Main()
         {
             int c = add<int>(2, 4);
 
@@ -65,7 +70,13 @@ namespace learncs
             //Addition addition = new Addition(1,2);
             Addition<int> addition = new Addition<int>(1, 2);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
         public static T add<T>(T a, T b)
         {
             dynamic x = a;

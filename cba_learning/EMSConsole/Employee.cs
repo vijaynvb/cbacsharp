@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace EMSConsole
 {
+
+    // Model
     public class Employee : Person
     {
         public int EmpId { get; set; }

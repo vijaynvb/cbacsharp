@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace EMSConsole
 {
+    // EMSConsole.EmployeeService
+
+    // service class 
     class EmployeeService : IEmployeeSvc
     { // CRUD Operations on a Employee list
-
 
         public EmployeeService()
         {
@@ -19,6 +22,8 @@ namespace EMSConsole
 
         }
 
+
+        // arrays
         Employee[] employees = new Employee[10];
 
         public void CreateEmployee(Employee newEmp)
