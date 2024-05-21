@@ -2,11 +2,11 @@
 
 namespace EMSApi.Repository
 {
-    public class EmployeeRepoitoryInMem
+    public class EmployeeRepositoryInMem : IEmployeeRepo
     {
         List<Employee> empList = new List<Employee>();
 
-        public EmployeeRepoitoryInMem()
+        public EmployeeRepositoryInMem()
         {
             empList.Add(new Employee(1,"vijay", 12));
             empList.Add(new Employee(2, "jai", 13));

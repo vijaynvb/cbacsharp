@@ -1,3 +1,5 @@
+using EMSApi.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +8,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// we are configuring EmployeeRepoitoryInMem injected where ever needed using DI 
+builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepositoryInMem>();
+//builder.Services.AddScoped<IEmployeeRepo, EmployeeRepositoryMSSQL>();
+//builder.Services.AddTransient<IEmployeeRepo, EmployeeRepositoryMSSQL>();
 
 var app = builder.Build();
 
@@ -17,6 +24,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
