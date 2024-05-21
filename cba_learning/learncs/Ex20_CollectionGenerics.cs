@@ -6,7 +6,7 @@ namespace learncs
 {
     class Ex20_CollectionGenerics
     {
-        static void Main()
+         void Main()
         {
             List<string> list = new List<string>();
             list.Add("vijay");

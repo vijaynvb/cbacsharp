@@ -5,11 +5,15 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learncs", "learncs\learncs.csproj", "{34447E1C-4583-4D01-A4D0-A72ADAFFE63C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hpv1", "hpv1\hpv1.csproj", "{EC1F42B1-8189-4989-B8F9-17B39B6C03BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hpv1", "hpv1\hpv1.csproj", "{EC1F42B1-8189-4989-B8F9-17B39B6C03BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hpv2", "hpv2\hpv2.csproj", "{5D409297-2D51-4ABC-BD97-9BC9E3431346}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hpv2", "hpv2\hpv2.csproj", "{5D409297-2D51-4ABC-BD97-9BC9E3431346}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSConsole", "EMSConsole\EMSConsole.csproj", "{C428E1B4-2278-4119-BD5E-9A879A5BA53D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EMSConsole", "EMSConsole\EMSConsole.csproj", "{C428E1B4-2278-4119-BD5E-9A879A5BA53D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspWebApi", "AspWebApi\AspWebApi.csproj", "{6FFEE82D-C5D8-4334-A68C-E95EEA7BEDE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EMSApi", "EMSApi\EMSApi.csproj", "{11C0B64F-5C5D-4EAD-8ECA-363F9D2DD50C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{C428E1B4-2278-4119-BD5E-9A879A5BA53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C428E1B4-2278-4119-BD5E-9A879A5BA53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C428E1B4-2278-4119-BD5E-9A879A5BA53D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFEE82D-C5D8-4334-A68C-E95EEA7BEDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFEE82D-C5D8-4334-A68C-E95EEA7BEDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFEE82D-C5D8-4334-A68C-E95EEA7BEDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFEE82D-C5D8-4334-A68C-E95EEA7BEDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C0B64F-5C5D-4EAD-8ECA-363F9D2DD50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C0B64F-5C5D-4EAD-8ECA-363F9D2DD50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C0B64F-5C5D-4EAD-8ECA-363F9D2DD50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C0B64F-5C5D-4EAD-8ECA-363F9D2DD50C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
