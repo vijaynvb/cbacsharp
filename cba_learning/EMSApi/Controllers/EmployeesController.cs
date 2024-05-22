@@ -1,12 +1,14 @@
 using EMSApi.DTO;
 using EMSApi.Model;
 using EMSApi.Repository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMSApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
     public class EmployeesController : ControllerBase
     {
         IEmployeeRepo _empRep; // = new EmployeeRepoitoryInMem();

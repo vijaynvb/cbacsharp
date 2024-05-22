@@ -1,9 +1,10 @@
 ﻿using EMSApi.Model;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EMSApi.Data
 {
-    public class EMSDbContext : DbContext
+    public class EMSDbContext : IdentityDbContext<ApplicationUser>
     {
         // conection string 
 
