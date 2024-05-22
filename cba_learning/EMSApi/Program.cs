@@ -1,3 +1,4 @@
+using EMSApi.Data;
 using EMSApi.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<EMSDbContext>();
 
 // we are configuring EmployeeRepoitoryInMem injected where ever needed using DI 
 builder.Services.AddSingleton<IEmployeeRepo, EmployeeRepositoryInMem>();

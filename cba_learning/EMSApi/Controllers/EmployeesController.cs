@@ -1,3 +1,4 @@
+using EMSApi.DTO;
 using EMSApi.Model;
 using EMSApi.Repository;
 using Microsoft.AspNetCore.Mvc;
@@ -37,13 +38,16 @@ namespace EMSApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateEmployee(Employee emp) // model binding 
+        public IActionResult CreateEmployee(EmployeeDTO emp) // model binding + validation framework
         {
-            Employee newEmp = _empRep.createEmployee(emp);
+            Employee interiemEmployee = new Employee();
+            interiemEmployee.Name = emp.Name;
+            interiemEmployee.Age = emp.Age;
+            Employee newEmp = _empRep.createEmployee(interiemEmployee);
             if (newEmp == null)
                 return BadRequest("Data not valid");
             else
-                return Created("",_empRep.createEmployee(emp));
+                return Created("",_empRep.createEmployee(newEmp));
         }
 
         [HttpPut]

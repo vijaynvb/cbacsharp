@@ -25,6 +25,7 @@ namespace EMSApi.Repository
 
         public Employee createEmployee(Employee newEmp)
         {
+            newEmp.Id = empList.Max(e => e.Id) + 1;
             empList.Add(newEmp);
             return newEmp;
         }
