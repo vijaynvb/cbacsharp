@@ -1,7 +1,10 @@
-﻿namespace EMSApi.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EMSApi.Model
 {
     public class Employee
     {
+        [Key] // primary key
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
@@ -9,9 +12,9 @@
         {
 
         }
-        public Employee(int id, string name, int age)
+        public Employee( string name, int age)
         {
-            Id = id;
+           // Id = id;
             Name = name;
             Age = age;
         }

@@ -47,7 +47,7 @@ namespace EMSApi.Controllers
             if (newEmp == null)
                 return BadRequest("Data not valid");
             else
-                return Created("",_empRep.createEmployee(newEmp));
+                return Created("",newEmp);
         }
 
         [HttpPut]
@@ -58,7 +58,7 @@ namespace EMSApi.Controllers
             if (newEmp == null)
                 return BadRequest("Data not valid");
             else
-                return Ok(_empRep.createEmployee(emp));
+                return Ok(newEmp);
         }
 
         [HttpDelete]
@@ -69,7 +69,7 @@ namespace EMSApi.Controllers
             if (newEmp == null)
                 return BadRequest("Data not valid");
             else
-                return Ok(_empRep.createEmployee(newEmp));
+                return Ok(newEmp);
         }
 
     }

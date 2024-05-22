@@ -8,10 +8,10 @@ namespace EMSApi.Repository
 
         public EmployeeRepositoryInMem()
         {
-            empList.Add(new Employee(1,"vijay", 12));
+            /*empList.Add(new Employee(1,"vijay", 12));
             empList.Add(new Employee(2, "jai", 13));
             empList.Add(new Employee(3, "bob", 14));
-            empList.Add(new Employee(4, "john", 15));
+            empList.Add(new Employee(4, "john", 15));*/
         }
 
         public List<Employee> getAll()
